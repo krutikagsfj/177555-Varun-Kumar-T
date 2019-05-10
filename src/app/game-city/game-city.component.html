@@ -1,0 +1,62 @@
+<h1>Welcome To Capgemini: 177555</h1>
+<hr>
+
+  <h1>Welcome To GameCity: Experience the Online Gaming Experience</h1>
+  <form [formGroup]="gameForm" (ngSubmit)="submit()">
+  
+  
+  
+   <table>
+     <tr>
+
+     <!-- name field is required -->
+
+      <td>Name</td>
+  
+      <div class="form-group">
+      <td><input type="text" class="form-control" formControlName="name" pattern="[a-zA-Z]*">
+       <div *ngIf="submitted &&gameForm.controls.name.errors" class="error">
+         <div class="text-danger" *ngIf="gameForm.controls.name.errors.required">name is required</div>
+         <div class="text-danger" *ngIf="gameForm.controls.name.errors.pattern">name is wrong</div>
+  
+  
+         </div>
+  
+  
+      </td>
+     </div>
+     </tr>
+     <tr>
+
+      <!-- address field is required -->
+
+
+      <td>Address</td>
+      <div class="form-group">
+      <td><input type="text" class="form-control" formControlName="address" >
+       <div *ngIf="submitted &&gameForm.controls.address.errors"class="error">
+         <div class="text-danger" *ngIf="gameForm.controls.address.errors.required">address is required</div>
+         </div>
+  
+  
+      </td>
+     </div>
+     </tr>
+     <tr>
+
+      <!-- amount field -->
+      <td>Amount</td>
+      <div class="form-group">
+      <td><input type="number" class="form-control" [formControl]="amount"> 
+      </td>
+     </div>
+     <button class="btn btn-success btn-lg" (click) ="getAmount()">Buy Card</button>
+  
+     </tr>
+  
+     <p>Note: 100 Rs will be deducted for service</p>
+  
+  
+  
+    </table>
+

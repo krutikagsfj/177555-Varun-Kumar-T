@@ -1,0 +1,19 @@
+
+<div class="col-lg-12">
+  <h2> Welcome to GameCity! Your Card Balance Amount is {{amount}}</h2>
+  <table class="table table-sm table-dark">
+    <tbody>
+
+        <!-- display table by using foreach loop -->
+
+
+      <tr *ngFor="let obj of games ">
+        <td>{{obj.id}})</td>
+        <td>{{obj.gName}}</td>
+        <td>{{obj.gprice}}</td>
+        <td><a href="">PlayNow</a></td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
